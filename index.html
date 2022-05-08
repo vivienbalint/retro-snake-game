@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Snake</title>
+  </head>
+  <body>
+      <div id="start-wrapper">
+        <h1 id="title" class="text">Snake</h1>
+        <button id="score-board-btn" class="text btn">Top Score</button>
+        <div id="level-wrapper">
+        <h2 id="difficulty-text" class="text">Select Difficulty:</h2>
+        <div>
+            <button id="easy-lvl-btn" class="text lvl-btn btn">EASY</button>
+            <button id="hard-lvl-btn" class="text lvl-btn btn">HARD</button>
+        </div>
+        </div>
+      </div>
+    
+    <div id="score-board"></div>
+    <canvas id="levelCanvas"></canvas>
+    
+    <div id="pop-up">
+      <h1 id="game-over" class="text">GAME OVER</h1>
+    </div>
+  </body>
+  <script src="./js/level.js"></script>
+  <script src="./js/game.js"></script>
+</html>
