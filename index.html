@@ -14,23 +14,49 @@
     <title>Snake</title>
   </head>
   <body>
-      <div id="start-wrapper">
-        <h1 id="title" class="text">Snake</h1>
-        <button id="score-board-btn" class="text btn">Top Score</button>
-        <div id="level-wrapper">
+    <audio src="./music/snake.mp3" id="music" controls autoplay loop></audio>
+    <div id="switch">
+      <img src="./img/volume.png" alt="volume" id="volume-img">
+    </div>
+    <div id="start-wrapper" class="wrapper">
+      <h1 id="title" class="text">Snake</h1>
+      <button id="score-board-btn" class="text btn">Top Score</button>
+      <div id="level-wrapper">
         <h2 id="difficulty-text" class="text">Select Difficulty:</h2>
         <div>
-            <button id="easy-lvl-btn" class="text lvl-btn btn">EASY</button>
-            <button id="hard-lvl-btn" class="text lvl-btn btn">HARD</button>
-        </div>
+          <button id="easy-lvl-btn" class="text lvl-btn btn">EASY</button>
+          <button id="hard-lvl-btn" class="text lvl-btn btn">HARD</button>
         </div>
       </div>
-    
-    <div id="score-board"></div>
+    </div>
+    <div id="score-board" class="wrapper">
+      <ol id="score-list"></ol>
+      <button id="back-btn" class="text btn">BACK</button>
+    </div>
+
+    <div id="save-score" class="wrapper">
+      <form action="#">
+        <label for="name" class="text"> Save your score: </label>
+        <input type="text" name="name" id="score-name" />
+      </form>
+      <div class="btn-wrapper">
+      <button id="save-btn" class="text btn">SAVE</button>
+      <button id="cancel-btn" class="text btn">CANCEL</button>
+    </div>
+    </div>
     <canvas id="levelCanvas"></canvas>
-    
-    <div id="pop-up">
+    <div id="score" class="text">Score: 0</div>
+
+    <div id="pop-up" class="wrapper">
       <h1 id="game-over" class="text">GAME OVER</h1>
+    </div>
+    <div style="display: none">
+      <img src="./img/apple.png" id="apple-img" class="apple-img" />
+      <img
+        src="./img/golden-apple.png"
+        id="golden-apple-img"
+        class="apple-img"
+      />
     </div>
   </body>
   <script src="./js/level.js"></script>
